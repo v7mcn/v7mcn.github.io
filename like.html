@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//v7m.cn">
+<link rel="dns-prefetch" href="//www.v7m.cn">
+<title>赞助 - 温故而知新 - 分享优秀好资源</title>
+<meta name="description" content="专注优秀软件和APP应用及互联网资源整理分享">
+<meta name="keywords" content="软件,下载,手机,电脑,app,windows,安卓,Android,ios,苹果,正版,key,免费,注册码,应用,绿色,破解,教程,官网,系统,激活码,APP,官方,序列号，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="赞助打赏 - 温故而知新 - 分享优秀好资源">
+<meta property="og:description" content="专注优秀软件和APP应用及互联网资源整理分享">
+<meta property="og:url" content="https://v7m.cn/like.html">
+<meta property="og:image" content="https://v7m.cn/logo.png">
+<meta property="og:site_name" content="温故而知新 - 分享优秀好资源">
+<link rel="canonical" href="https://v7m.cn">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="spectre.min.css">
+<link rel="stylesheet" href="thea.min.css">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-2702768-6', { 'allow_display_features': false });
+  gtag('set', {'content_group1': 'FeaturedArticles'});
+  gtag('event', 'share', {'event_category': 'engagement', 'event_label': 'Twitter'});
+</script>
+<style type="text/css">
+        .res
+        {
+            color: Red;
+        }
+        .result{
+            background: yellow;
+        }
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script> -->
+	<script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var oldKey = "";
+        var index = -1;
+        var pos = new Array();//用于记录每个关键词的位置，以方便跳转
+        var oldCount = 0;//记录搜索到的所有关键词总数
+        function previous(){
+            index--;
+            index = index < 0 ? oldCount - 1 : index;
+            search();
+        }
+        function next(){
+            index++;
+            //index = index == oldCount ? 0 : index;
+            if(index==oldCount){
+                index = 0 ;
+            }
+            search();
+        }
+        function search() {
+            $(".result").removeClass("res");//去除原本的res样式
+            var key = $("#key").val(); //取key值
+            if (!key) {
+                console.log("key为空则退出");
+                $(".result").each(function () {//恢复原始数据
+                    $(this).replaceWith($(this).html());
+                });
+                oldKey = "";
+                return; //key为空则退出
+            }
+            if (oldKey != key) {
+                console.log("进入重置方法");
+                //重置
+                index = 0;
+                $(".result").each(function () {
+                    $(this).replaceWith($(this).html());
+                });
+                pos = new Array();
+                var regExp = new RegExp(key+'(?!([^<]+)?>)', 'ig');//正则表达式匹配
+                $("body").html($("body").html().replace(regExp, "<span id='result" + index + "' class='result'>" + key + "</span>")); // 高亮操作
+                $("#key").val(key);
+                oldKey = key;
+                $(".result").each(function () {
+                    pos.push($(this).offset().top);
+                });
+                oldCount = $(".result").length;
+                console.log("oldCount值：",oldCount);
+            }
+            $(".result:eq(" + index + ")").addClass("res");//当前位置关键词改为红色字体
+            $("body").scrollTop(pos[index]);//跳转到指定位置
+        }
+    </script>
+</head>
+<body>
+<div class="thea">
+  <div class="thea-header">
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-section">
+		<img src="logo.png" width="40" height="40"/><a href="https://v7m.cn/" class="logo" alt="温故而知新 - 分享优秀好资源" rel="home">V7M.CN</a>
+        </div>
+		<div class="navbar-center hide-sm">
+		  <ul class="nav">
+		    <li class="nav-item active"><a href="https://v7m.cn/" target="_blank">首页</a></li>
+			<li class="nav-item"><a href="date.html" target="_blank">目录</a></li>
+			<li class="nav-item"><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=GHJ3a3Z2WG5xaDZpaTZ7d3U" target="_blank">联系</a></li>
+		  </ul>
+		</div>
+		<div class="navbar-section">
+		  <div id="search" class="search">
+		    <div class="search-form">
+		      <input id="key" type="text" class="search-input form-input" value="" placeholder="搜索" onclick="next()">
+		      <input type="button" class="search-btn btn btn-link" value="" onclick="next()">
+		    </div>
+		  </div>
+		</div>
+      </div>
+    </div>
+  </div>
+<main class="thea-body" role="main">
+<div class="container">
+<div class="columns">
+<article id="post-12759" class="post post-full">
+      <div class="post-like">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title h5"></p><span class="text-error">所有赞助将全部用于网站建设（域名续费，云存储，服务器等）</span></div>
+          </div>
+          <div class="card-body">
+            <div class="columns">
+              <div class="column col-6">
+                <img class="img-responsive" src="wechat.jpg">
+              </div>
+              <div class="column col-6">
+                <img class="img-responsive" src="alipay.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	<div class="post-meta-tags">
+	<a class="label tag">敷**** 赞助 2 元</a></br>
+	<a class="label tag">无敌*** 赞助 5 元</a></br>
+	<a class="label tag">***聪 赞助 5 元</a></br>
+	<a class="label tag">AA永** 赞助 1 元</a></br>
+	<a class="label tag">***斌 赞助 8 元</a></br>
+	<a class="label tag">常** 赞助 3 元</a></br>
+	</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="thea-footer">
+  <div class="container text-center">
+    <section class="copyright"><a href="https://v7m.cn/" target="_blank">首页</a> | <a href="date.html" target="_blank">目录</a> | <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=GHJ3a3Z2WG5xaDZpaTZ7d3U" target="_blank">联系</a></section>
+	<section class="copyright">Copyright &copy; <a href="https://v7m.cn/" target="_blank">v7m.cn</a> All Rights Reserved.</section>
+  </div>
+</footer>
+</div>
+</body>
+</html>
